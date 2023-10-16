@@ -1,55 +1,101 @@
 /*ALAB 308H.5.2 - Array Methods and Callbacks
-    Callbacks
-    Solve problems by referencing documentation when dealing with unfamiliar topics.
-
+Callbacks: Solve problems by referencing documentation when dealing with unfamiliar topics.
+For each of the Array methods below: The first statement is for the numbers array, The second statement is for the string array. 
 */
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0];
 const panagram = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog'];
-/* Every
+
+/* 
+Every
     Determine if every number is greater than or equal to 0.
-    Determine if every word shorter than 8 characters. */
-
+    Determine if every word shorter than 8 characters. 
+*/
 const everyNum = (nums) => {
-    let narr = [];
-    return nums.every()
+    let narr = nums.every(i => i >= 8);
+    return narr; 
 };
-
-/* For each of the Array methods below:
-    The first statement is for the numbers array.
-    The second statement is for the string array. */
+const everyPanm = (words) => {
+    let narr = words.every(i => i.length >= 8);
+    return narr;
+};
+console.log(everyNum(nums));
+console.log(everyPanm(panagram));
 
 /* Filter
     filter the array for numbers less than 4.
     Filter words that have an even length.*/
-
-/* Find
-    Find the first value divisible by 5.
-    Find the first word that is longer than 5 characters.
-*/
+const filterU = (arr) => {
+    if (typeof(arr[0]) ==='number') {
+    return arr.filter(i => i < 4);
+    }
+    else {
+        return arr.filter(i => i.length % 2 == 0)
+    }
+};
+console.log(filterU(nums));
+console.log("lazy")
+console.log(filterU(panagram));
 
 /* For Each
     Log each value of the array multiplied by 3.
     Log each word with an exclamation point at the end of it.
 */
+function fEachU(arr) {
+    
+    if (typeof(arr[0])==="number") {
+        arr.forEach(element => console.log(element * 2));
 
+    } else {
+        //console.log(arr.forEach(element => {element + '!'}));
+        arr.forEach(element => console.log(element + '!'));
+    }
+}
+fEachU(nums);
+fEachU(panagram);
+console.log("above is forEacher")
 /* Map
     Make a new array of each number multiplied by 100.
     Make a new array of all of the words in all uppercase.
 */
-
+const mapU = (arr) => {
+    if (typeof(arr[0])==='number') {
+        return arr.map(i => i * 100);
+    } else {
+        return arr.map(i => i.toUpperCase());
+    }
+};
+console.log(mapU(nums));
+console.log(mapU(panagram));
+console.log("mapper above");
 /* 
 Some
     Find out if some numbers are divisible by 7.
     Find out if some words have the letter a in them.
 */
+const someU = (arr) => {
+    if(typeof(arr[0])==='number') {
 
+        return arr.some(i => i % 7 === 0);
+    } else {
+        return arr.some(i => i.includes('a'));
+    }
+};
+console.log(someU(nums));
+console.log(someU(panagram));
 /*
 Reduce
     Add all of the numbers in the array together using the reduce method.
     Concatenate all the words using reduce.
 */
-
-
+const reduceU = (arr) => {
+    if(typeof(arr[0])==='number') {
+        return arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    } else {
+        return arr.reduce((accumulator, currentValue) => accumulator + currentValue, '');
+    }
+};
+console.log(reduceU(nums));
+console.log(reduceU(panagram));
 //isPanagram
 
 //Using the following array, test whether each letter a-z (case insensitive) is used at least once.
@@ -74,12 +120,9 @@ Sort
     Sort the words in ascending order.
     Sort the words in descending order.
 */
-function sort0(x) {
-    let arrn = x.sort();
-    return arrn;
-}
-console.log(nums)
-console.log(sort0(nums))
+
+//console.log(nums);
+//console.log(panagram);
 
 const products = [
       {
