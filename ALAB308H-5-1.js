@@ -98,9 +98,12 @@ console.log(stringsLongerThan(["hello sanad", "hello","12345678", "12345678910",
 // 10. Define a function, as a function expression, addList that accepts any quantity of numbers as arguments, adds them together, and returns the resulting sum. Assume all parameters will be numbers. If called with no arguments, return 0 (zero).
 const addList = function(...args) {
     let sum = 0;
+    if (args.length == 0)
+    return 0;
     for (let i in args){
         sum += args[i];
     }
     return sum;
 }
 console.log(addList(2,3,4,54,23,1,67,-1))
+console.log(addList())

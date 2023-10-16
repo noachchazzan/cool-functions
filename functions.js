@@ -13,9 +13,10 @@ const fncExpression = function(x) {
     to its variable is the source of many an error for JS developers!*/
     console.log("I am a function expression and I am not hoisted.");
 }
-
+let aa = 45;
+let b = 34;
 // ES6 introduces arrow function as follows:
-const add = (a,b) => a + b;
+const add = (aa,b) => aa + b;
 /* Arrow Functions offer:
 
 A more concise syntax.
@@ -42,20 +43,22 @@ function computeArea(width, height) {
     let area = width*height;
     console.log("The are of a ractangle with a wdth of " + width + " and a height of " + height + " is " + area + "square units.")
 }
-
+console.log("area of 7  and 7");
 computeArea(7,7);
-
+console.log("checks if telos 5, earth, MARS have water")
 const planetHasWater = function(planet) {
     if (typeof planet !== 'string') {
         throw new Error('The provided value is not a string.');
     }
-    if (planet.toLowerCase() === "Earth" || planet.toLowerCase() === "Mars")
+    if (planet.toLowerCase() === "earth" || planet.toLowerCase() === "mars")
     return true;
 
     return false;
 
 }
-console.log(planetHasWater("Telos 5"));
+console.log("Telos 5: "+planetHasWater("Telos 5"));
+console.log("earth: " + planetHasWater("earth"));
+console.log("Mars water:" +planetHasWater("MARS"));
 /*❓ How many different ways are there to define a function?
 x 3 which are function defintions, function expressions and arrow functions.
 ❓ What's the only practical difference between a function definition and a function expression?
@@ -134,7 +137,34 @@ a.forEach(function(color) {
 (function() {
 	let arg1 = "new arg1 inside IIFE"
 })();
-//❓ Why does this construct virtually prevent variables and functions from being created in the global scope?:
+function getDevObject2(name, id,...args) {
+    let newObj = {
+        name: name,
+        id: id,
+        data: args,
+    }
+    return newObj;
+}
+console.log(getDevObject2("Noach", 4534, ["software engineer", "male","sro", "jewish"]))
+
+function defaultF(name="noach", id, ...args){
+    let newObj = {
+        name: name,
+        id: id,
+        data: args,
+    }
+    return newObj;
+}
+let y = 3434;
+let x;
+console.log(defaultF(x,y,[34,34,34,34,34]))
+
+
+
+
+
+
+
 
 
 /*Hoisting
