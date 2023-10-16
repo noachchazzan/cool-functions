@@ -96,6 +96,8 @@ const reduceU = (arr) => {
 };
 console.log(reduceU(nums));
 console.log(reduceU(panagram));
+
+
 //isPanagram
 
 //Using the following array, test whether each letter a-z (case insensitive) is used at least once.
