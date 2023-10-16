@@ -248,3 +248,11 @@ function intersection(...args) {
 // Uncomment these to check your work!
 
 console.log(intersection([arr1, arr2, arr3])); // should log: [5, 15]
+
+const func1 = (a,b) => {
+    a; 
+    b; 
+    return a + b;
+};
+func1(4,5);
+console.log(func1(55,55))
