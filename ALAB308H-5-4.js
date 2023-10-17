@@ -1,12 +1,3 @@
-// ========================
-// INTRO BY GRANDPA LINUS
-// ========================
-/*
-Hey there, my brilliant granddaughter!
-
-I've always been impressed by your intellect. Today, let's embark on a journey to dive deeper into the heart of JavaScript and uncover its magic. This adventure will take us through concepts, from the very basic to the quite intriguing, and by the end, I'm confident you'll have gained even more prowess in the world of coding. Let's jump right in!
-
-*/
 
 // ========================
 // VARIABLES & DATA TYPES: The Building Blocks
@@ -96,35 +87,44 @@ for (let i = 1;i <= 100;i++) {
     if (i % 2 === 0)
     console.log("<-- This one's even!" + i);
 }
-
+const h5_cR = (arr) => {
+    for (let i in arr) {
+        if (arr[i] % 5 === 0) {
+            console.log(arr[i])
+        }
+        else if (arr[i] % 3 === 0) {
+            console.log(arr[i]);
+            console.log('<--- multiple of 3');
+        }
+        else if (arr[i] % 3 === 0 && arr[i] % 5 === 0 && arr[i] % 7 === 0) {
+            console.log("CELEBRATE GOOD TIMES! BH!!!")
+        }
+    }
+}
 // ========================
 // ARRAYS & CONTROL FLOW: Organizing and Directing the Show
 // ========================
 /*
 Arrays are like shelves where you can organize multiple items. Let's dig deeper.
-
 A. Discuss:
 - What are items in an array called?
 - Does an array ensure items are always in order?
 - Can you think of real-world things that can be represented using an array?
-
 B. Building and Accessing:
 TODO:
 - Create an array of your favorite quotes.
 - Given an array, how would you access the 1st item? What about the 3rd?
-
 C. Modifying and Updating:
 TODO:
 - We have some arrays here. Your mission, should you choose to accept it, is to modify, update, and manipulate them.
-
 */
 qoutes = ["live and let live","abc","qoute2"];
 console.log(qoutes[0]);
-
 /* D. The Farm
     Declare a variable animal. Set it to be "cow" or some other animal.
     Write code that will print out "mooooo" if the variable is equal to cow.
     Change your code so that if the variable animal is anything other than a cow, it will print "Hey! You're not*/
 let animal = "cow"; 
-if (animal === 'cow')
-console.log("mooooo")
+if (animal === 'cow'){
+console.log("mooooo")}
+else {console.log("Hey! Youre not");

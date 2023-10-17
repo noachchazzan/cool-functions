@@ -10,11 +10,11 @@ Every
     Determine if every word shorter than 8 characters. 
 */
 const everyNum = (nums) => {
-    let narr = nums.every(i => i >= 8);
+    let narr = nums.every(i => i >= 0);
     return narr; 
 };
 const everyPanm = (words) => {
-    let narr = words.every(i => i.length >= 8);
+    let narr = words.every(i => i.length < 8);
     return narr;
 };
 console.log(everyNum(nums));
@@ -40,7 +40,7 @@ console.log(filterU(panagram));
 function fEachU(arr) {
     
     if (typeof(arr[0])==="number") {
-        arr.forEach(element => console.log(element * 2));
+        arr.forEach(element => console.log(element * 3));
 
     } else {
         //console.log(arr.forEach(element => {element + '!'}));
@@ -117,13 +117,23 @@ Sort
     Sort the words in ascending order. x
     Sort the words in descending order.
 */
-console.log("none-formated sort of numbers: " + nums.sort())
-console.log("unformated sort of panangram: "+panagram.sort())
-console.log("ascedning order nums: " + nums.sort((a,b) => a - b));
-console.log("desendning order nums: " + nums.sort((a,b) => b - a));
-console.log("ascedning order panangram: " + panagram.sort((a,b) => a - b));
-console.log("decedning order panangram: " + panagram.sort((a,b) => b.localeCompare(a)));
-//isPanagram
+function sortU(arr) {
+  let narr = nums;
+  console.log("none-formated sort of numbers: " + narr.sort());
+  narr = panagram
+  console.log("unformated sort of panangram: "+ narr.sort());
+  narr = nums;
+  console.log("ascedning order nums: " + narr.sort((a,b) => a - b));
+  narr  = nums;
+  console.log("desendning order nums: " + nums.sort((a,b) => b - a));
+  narr  =panagram;
+  console.log("ascedning order panangram: " + panagram.sort((a,b) => a.localeCompare(b)));
+  narr = panagram;
+  console.log("decedning order panangram: " + panagram.sort((a,b) => b.localeCompare(a)));
+}
+sortU();
+
+//isPanagram: 
 //Using the following array, test whether each letter a-z (case insensitive) is used at least once.
 // const panagram = ['The', 'quick','brown','fox', 'jumps', 'over', 'the', 'lazy', 'dog'];
 /*
