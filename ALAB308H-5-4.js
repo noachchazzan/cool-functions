@@ -39,9 +39,35 @@ Booleans are like light switches, they can only be on (true) or off (false).
 TODO:
 - We have some variables and some conditions. Your task is to make all the conditions true.
 */
+// C. 
+const a = 4;
+const b = 53;
+const c = 57;
+const d = 16;
+const e = 'Kevin';
 
+console.log(a < b);
+console.log(c > d);
+console.log('Name' === 'Name');
+// FOR THE NEXT TWO, USE ONLY && OR ||
+console.log(true || false);
+console.log(false || false || false || false || false || true);
+console.log(false && false)
+console.log(e || 'Kevin');
+console.log(a || b || c); // note: a < b < c is NOT CORRECT (and is not a valid JS expression, think about using other math operations)
+console.log(a && a !== d); // note: the answer is a simple arithmetic equation, not something "weird"
+console.log(48 !== '48');
+
+// B. 
+let firstVariable = "Hello World";
+firstVariable = 1; 
+let secondVariable = firstVariable;
+secondVariable = "any phrase";
+console.log(firstVariable);
+let myname = "Tevin Cameron Carter";
+console.log("Hello my name is " + myname);
 // TODO: Add and modify the code so that all the log statements print true.
-
+console.log(typeof(firstVariable)==='number');
 // ========================
 // LOOPS: The Repetition Game
 // ========================
@@ -66,6 +92,10 @@ TODO:
 - And sometimes, celebrate numbers that are both!
 
 */
+for (let i = 1;i <= 100;i++) {
+    if (i % 2 === 0)
+    console.log("<-- This one's even!" + i);
+}
 
 // ========================
 // ARRAYS & CONTROL FLOW: Organizing and Directing the Show
@@ -88,77 +118,13 @@ TODO:
 - We have some arrays here. Your mission, should you choose to accept it, is to modify, update, and manipulate them.
 
 */
+qoutes = ["live and let live","abc","qoute2"];
+console.log(qoutes[0]);
 
-// TODO: Modify and manipulate the given arrays based on the tasks.
-
-// ========================
-// FUNCTIONS: Your Personal Helpers
-// ========================
-/*
-Functions are like your personal assistants. You tell them what you want done, and they do it!
-
-A. Creating and Using Functions:
-TODO:
-- Craft a function that greets someone.
-- Make another that comments on a person's coolness.
-- One that calculates the volume of a cube.
-- And another that identifies vowels.
-
-B. Arrays and Functions:
-TODO:
-- Can you make a function that tells the length of two strings?
-- How about one that processes an array of strings and returns their lengths?
-
-C. Advanced Functions:
-TODO:
-- Which number is the biggest? Can you make a function to find out?
-- Given an array, can you find the longest word?
-
-*/
-
-// TODO: Create and test functions based on the tasks.
-
-// ========================
-// OBJECTS: The Multi-Tool
-// ========================
-/*
-Objects let you store multiple pieces of information together. Think of them as multi-compartment toolboxes.
-
-A. Building an Object:
-TODO:
-- Create a user object with details like name, email, and age.
-
-B. Modifying Objects:
-TODO:
-- Update some details of the user.
-- Add more details, like their location.
-
-C. Diving Deeper:
-TODO:
-- Play around with the given objects. Modify, update, and understand how objects within objects work.
-
-*/
-
-// TODO: Work with objects based on the tasks.
-
-// ========================
-// CHALLENGES: Test Your Mettle
-// ========================
-/*
-If you've sailed smoothly till here, try these challenges. They'll test the skills you've honed so far.
-
-TODO:
-- Combine cats in weird and wonderful ways.
-- Dig deeper into the array and object challenges.
-- Explore the given objects and arrays, manipulate them, and uncover their secrets.
-
-*/
-
-// TODO: Take on the challenges.
-
-/*
-Well, wasn't that a ride? Remember, just like any skill, coding gets better with practice. The puzzles and challenges you faced today are just the tip of the iceberg. Dive deeper, keep practicing, and soon you'll be crafting code like an artist paints a canvas.
-
-Proud of you, always!
-- Grandpa Linus
-*/
+/* D. The Farm
+    Declare a variable animal. Set it to be "cow" or some other animal.
+    Write code that will print out "mooooo" if the variable is equal to cow.
+    Change your code so that if the variable animal is anything other than a cow, it will print "Hey! You're not*/
+let animal = "cow"; 
+if (animal === 'cow')
+console.log("mooooo")

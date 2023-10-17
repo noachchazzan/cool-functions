@@ -4,7 +4,6 @@ For each of the Array methods below: The first statement is for the numbers arra
 */
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0];
 const panagram = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog'];
-
 /* 
 Every
     Determine if every number is greater than or equal to 0.
@@ -20,7 +19,6 @@ const everyPanm = (words) => {
 };
 console.log(everyNum(nums));
 console.log(everyPanm(panagram));
-
 /* Filter
     filter the array for numbers less than 4.
     Filter words that have an even length.*/
@@ -35,7 +33,6 @@ const filterU = (arr) => {
 console.log(filterU(nums));
 console.log("lazy")
 console.log(filterU(panagram));
-
 /* For Each
     Log each value of the array multiplied by 3.
     Log each word with an exclamation point at the end of it.
@@ -96,36 +93,44 @@ const reduceU = (arr) => {
 };
 console.log(reduceU(nums));
 console.log(reduceU(panagram));
-
-
-//isPanagram
-
-//Using the following array, test whether each letter a-z (case insensitive) is used at least once.
-/*
-Working with data: Using the array of objects below:
-    Filter for products with a price that is less than 10.
-    Sort alphabetically by product name.
-*/
-
 /* 
 Find Index
     Find the index of the first number that is divisible by 3.
     Find the index of the first word that is less than 2 characters long.
 */
-
+const indexU = (arr) => {
+    if (typeof(arr[0])==="number"){
+      return arr.findIndex(i => i % 3 === 0);
+    } else {
+      return arr.findIndex(i => i.length < 2);
+    }
+};
+console.log("indexU: ")
+console.log(indexU(nums));
+console.log(indexU(panagram));
 /*
 Sort
-    Try to sort without any arguments, do you get what you'd expect with the numbers array?
-    Try to sort without any arguments, do you get what you'd expect with the words array?
-    Sort the numbers in ascending order.
-    Sort the numbers in descending order.
-    Sort the words in ascending order.
+    Try to sort without any arguments, do you get what you'd expect with the numbers array? x
+    Try to sort without any arguments, do you get what you'd expect with the words array? x
+    Sort the numbers in ascending order. x
+    Sort the numbers in descending order. x
+    Sort the words in ascending order. x
     Sort the words in descending order.
 */
-
-//console.log(nums);
-//console.log(panagram);
-
+console.log("none-formated sort of numbers: " + nums.sort())
+console.log("unformated sort of panangram: "+panagram.sort())
+console.log("ascedning order nums: " + nums.sort((a,b) => a - b));
+console.log("desendning order nums: " + nums.sort((a,b) => b - a));
+console.log("ascedning order panangram: " + panagram.sort((a,b) => a - b));
+console.log("decedning order panangram: " + panagram.sort((a,b) => b.localeCompare(a)));
+//isPanagram
+//Using the following array, test whether each letter a-z (case insensitive) is used at least once.
+// const panagram = ['The', 'quick','brown','fox', 'jumps', 'over', 'the', 'lazy', 'dog'];
+/*
+Working with data: Using the array of objects below:
+    Filter for products with a price that is less than 10.
+    Sort alphabetically by product name.
+*/
 const products = [
       {
         "name": "allen wrench",
@@ -228,3 +233,9 @@ const products = [
         "description": "You'll get 'stuck' on it"
       },
     ]
+const sortProducts = (arr) => {
+  return arr.sort((a,b) => a.name.localeCompare(b.name));
+};
+const filterAO = (arr) => {return products.filter(i => i.price < 10)};
+console.log(filterAO(products));
+console.log(sortProducts(products));
